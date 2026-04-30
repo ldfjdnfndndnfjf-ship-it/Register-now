@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn Hacking with Nawab ZADA</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@500;700&display=swap');
+
+        :root {
+            --neon-green: #00ff41;
+            --dark-bg: #0a0a0a;
+            --card-bg: #151515;
+            --text-color: #e0e0e0;
+        }
+
+        body {
+            background-color: var(--dark-bg);
+            color: var(--text-color);
+            font-family: 'Rajdhani', sans-serif;
+            margin: 0;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 450px;
+            background: var(--card-bg);
+            border: 2px solid var(--neon-green);
+            box-shadow: 0 0 20px rgba(0, 255, 65, 0.2);
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+            position: relative;
+        }
+
+        .banner {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 22px;
+            color: var(--neon-green);
+            text-shadow: 0 0 10px var(--neon-green);
+            margin-bottom: 5px;
+        }
+
+        .trust-box {
+            background: rgba(0, 255, 65, 0.05);
+            border: 1px solid var(--neon-green);
+            padding: 10px;
+            margin: 15px 0;
+            text-align: left;
+            font-size: 13px;
+            border-radius: 5px;
+        }
+
+        .form-group {
+            text-align: left;
+            margin-bottom: 12px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: var(--neon-green);
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 10px;
+            background: #222;
+            border: 1px solid #444;
+            color: white;
+            border-radius: 8px;
+            box-sizing: border-box;
+            outline: none;
+        }
+
+        input:focus {
+            border-color: var(--neon-green);
+        }
+
+        .btn-submit {
+            width: 100%;
+            padding: 12px;
+            background: var(--neon-green);
+            color: black;
+            border: none;
+            font-family: 'Orbitron', sans-serif;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 8px;
+            margin-top: 10px;
+            text-transform: uppercase;
+            box-shadow: 0 0 10px var(--neon-green);
+        }
+
+        /* Result Card Styling */
+        #resultPage {
+            display: none;
+            text-align: left;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .data-row {
+            margin-bottom: 10px;
+            border-bottom: 1px solid #333;
+            padding-bottom: 5px;
+            font-size: 16px;
+        }
+
+        .data-label {
+            color: var(--neon-green);
+            font-weight: bold;
+            width: 130px;
+            display: inline-block;
+        }
+
+        .status-badge {
+            color: yellow;
+            font-weight: bold;
+            text-shadow: 0 0 5px rgba(255, 255, 0, 0.5);
+        }
+
+        .footer-note {
+            background: #000;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 12px;
+            margin-top: 20px;
+            border: 1px dashed var(--neon-green);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div id="formPage">
+            <div class="banner">LEARN HACKING WITH NAWAB ZADA</div>
+            <div style="font-size: 12px; color: #888; margin-bottom: 10px;">Official Registration Page</div>
+
+            <div class="trust-box">
+                <strong>🛡️ Why Trust Me?</strong><br>
+                - Professional White Hat Hacker & Tool Dev<br>
+                - 100% Practical & Real Knowledge<br>
+                - Your Data is Encrypted & Secure
+            </div>
+
+            <form id="regForm">
+                <div class="form-group">
+                    <label>Real Name</label>
+                    <input type="text" id="name" required placeholder="Nawab zada">
+                </div>
+                <div class="form-group">
+                    <label>Date of Birth</label>
+                    <input type="date" id="dob" required>
+                </div>
+                <div class="form-group">
+                    <label>City</label>
+                    <input type="text" id="city" required placeholder="Punjab">
+                </div>
+                <div class="form-group">
+                    <label>Phone Number</label>
+                    <input type="tel" id="phone" required placeholder="+923196916264">
+                </div>
+                <div class="form-group">
+                    <label>WhatsApp Number</label>
+                    <input type="tel" id="whatsapp" required placeholder="03328462233">
+                </div>
+                <div class="form-group">
+                    <label>Gender</label>
+                    <select id="gender" required>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn-submit">SUBMIT & GENERATE CARD</button>
+            </form>
+        </div>
+
+        <div id="resultPage">
+            <div class="banner" style="font-size: 18px; text-align: center;">REGISTRATION CARD</div>
+            <div style="text-align: center; font-size: 11px; color: #888; margin-bottom: 20px;">Nawab ZADA Hacking Academy - Session 2026</div>
+
+            <div class="data-row"><span class="data-label">Full Name:</span> <span id="resName"></span></div>
+            <div class="data-row"><span class="data-label">DOB:</span> <span id="resDob"></span></div>
+            <div class="data-row"><span class="data-label">City:</span> <span id="resCity"></span></div>
+            <div class="data-row"><span class="data-label">Phone:</span> <span id="resPhone"></span></div>
+            <div class="data-row"><span class="data-label">WhatsApp:</span> <span id="resWhatsapp"></span></div>
+            <div class="data-row"><span class="data-label">Gender:</span> <span id="resGender"></span></div>
+            <div class="data-row"><span class="data-label">Status:</span> <span class="status-badge">PENDING VERIFICATION</span></div>
+
+            <div class="footer-note">
+                📸 <strong>Action Required:</strong> Is card ka screenshot lein aur Mujhy WhatsApp par send karein taake aapka batch confirm ho sakay.
+            </div>
+            
+            <button onclick="window.location.reload()" class="btn-submit" style="background: #333; color: white;">GENERATE NEW FORM</button>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('regForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Transfer values to card
+            document.getElementById('resName').innerText = document.getElementById('name').value;
+            document.getElementById('resDob').innerText = document.getElementById('dob').value;
+            document.getElementById('resCity').innerText = document.getElementById('city').value;
+            document.getElementById('resPhone').innerText = document.getElementById('phone').value;
+            document.getElementById('resWhatsapp').innerText = document.getElementById('whatsapp').value;
+            document.getElementById('resGender').innerText = document.getElementById('gender').value;
+
+            // Show Card View
+            document.getElementById('formPage').style.display = 'none';
+            document.getElementById('resultPage').style.display = 'block';
+        });
+    </script>
+</body>
+</html>
