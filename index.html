@@ -14,6 +14,7 @@
             --text-color: #e0e0e0;
         }
 
+        /* Security Note: Right click and Inspect are disabled via JS below */
         body {
             background-color: var(--dark-bg);
             color: var(--text-color);
@@ -24,6 +25,7 @@
             justify-content: center;
             align-items: center;
             min-height: 100vh;
+            user-select: none; /* Prevents text highlighting */
         }
 
         .container {
@@ -162,23 +164,21 @@
         }
     </style>
 </head>
-<body>
-
-    <div class="container">
+<body oncontextmenu="return false;"> <div class="container">
         <div id="formPage">
             <div class="banner">LEARN HACKING WITH NAWAB ZADA</div>
             <div style="font-size: 12px; color: #888; margin-bottom: 10px;">Official Registration Portal</div>
 
             <div class="trust-box">
-                <strong>🛡️ Why Trust Me?</strong><br>
-                - I'm Professional White Hat Hacker & Tool Dev<br>
+                <strong>🛡️ Why Trust Nawab ZADA?</strong><br>
+                - Professional White Hat Hacker & Tool Dev<br>
                 - 100% Practical & Real Knowledge<br>
                 - Course Fee: <strong>500 PKR Only</strong><br>
                 - Your Data is Encrypted & Secure
             </div>
 
             <div class="bank-details">
-                <strong>💳 PAYMENT DETAILS (Fee: 500 PKR Pr Month)</strong><br>
+                <strong>💳 PAYMENT DETAILS (Fee: 500 PKR)</strong><br>
                 Account Name: <strong>ZAHID HUSSAIN</strong><br>
                 Account No: <strong>00300114235294</strong><br>
                 IBAN: <strong>PK36MEZN0000300114235294</strong><br>
@@ -225,7 +225,7 @@
 
         <div id="resultPage">
             <div class="banner" style="font-size: 18px; text-align: center;">REGISTRATION CARD</div>
-            <div style="text-align: center; font-size: 11px; color: #888; margin-bottom: 20px;">Nawab ZADA Academy - Session 2026</div>
+            <div style="text-align: center; font-size: 11px; color: #888; margin-bottom: 20px;">Nawab ZADA Hacking Academy - Session 2026</div>
 
             <div class="data-row"><span class="data-label">Full Name:</span> <span id="resName"></span></div>
             <div class="data-row"><span class="data-label">DOB:</span> <span id="resDob"></span></div>
@@ -236,7 +236,7 @@
             <div class="data-row"><span class="data-label">Status:</span> <span class="status-badge">PAID & PENDING VERIFICATION</span></div>
 
             <div class="footer-note">
-                📸 <strong>Action Required:</strong> Dear Is card ka screenshot lein Mera Nmber save kr ka WhatsApp par send karein taake aapka batch confirm ho sakay.
+                📸 <strong>Action Required:</strong> Dear User Is card ka screenshot lein Nmber Save kr ka WhatsApp par send karein taake aapka batch confirm ho sakay.
             </div>
 
             <a href="https://wa.me/971528243405?text=Boss%20maine%20fees%20pay%20kar%20di%20hai%20aur%20register%20bhi%2C%20yeh%20raha%20mera%20form%20screenshot" class="btn-submit btn-whatsapp" target="_blank">SEND TO WHATSAPP</a>
@@ -246,6 +246,15 @@
     </div>
 
     <script>
+        // --- Nawab ZADA Security Layer ---
+        document.onkeydown = function(e) {
+            if(e.keyCode == 123) { return false; } // Block F12
+            if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) { return false; } // Block Ctrl+Shift+I
+            if(e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)) { return false; } // Block Ctrl+Shift+C
+            if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) { return false; } // Block Ctrl+Shift+J
+            if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) { return false; } // Block Ctrl+U
+        };
+
         document.getElementById('regForm').addEventListener('submit', function(e) {
             e.preventDefault();
             
