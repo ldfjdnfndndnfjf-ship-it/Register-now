@@ -56,6 +56,19 @@
             border-radius: 5px;
         }
 
+        .bank-details {
+            background: #1a1a1a;
+            border: 1px dashed #555;
+            padding: 10px;
+            margin-bottom: 15px;
+            text-align: left;
+            font-size: 14px;
+            color: #fff;
+            border-radius: 8px;
+        }
+
+        .bank-details strong { color: var(--neon-green); }
+
         .form-group {
             text-align: left;
             margin-bottom: 12px;
@@ -154,19 +167,28 @@
     <div class="container">
         <div id="formPage">
             <div class="banner">LEARN HACKING WITH NAWAB ZADA</div>
-            <div style="font-size: 12px; color: #888; margin-bottom: 10px;">Official Registration page</div>
+            <div style="font-size: 12px; color: #888; margin-bottom: 10px;">Official Registration Portal</div>
 
             <div class="trust-box">
                 <strong>🛡️ Why Trust Me?</strong><br>
-                - Professional White Hat Hacker & Tool Dev<br>
+                - I'm Professional White Hat Hacker & Tool Dev<br>
                 - 100% Practical & Real Knowledge<br>
+                - Course Fee: <strong>500 PKR Only</strong><br>
                 - Your Data is Encrypted & Secure
+            </div>
+
+            <div class="bank-details">
+                <strong>💳 PAYMENT DETAILS (Fee: 500 PKR Pr Month)</strong><br>
+                Account Name: <strong>ZAHID HUSSAIN</strong><br>
+                Account No: <strong>00300114235294</strong><br>
+                IBAN: <strong>PK36MEZN0000300114235294</strong><br>
+                Bank: <strong>MEEZAN DIGITAL CENTRE</strong>
             </div>
 
             <form id="regForm">
                 <div class="form-group">
                     <label>Real Name</label>
-                    <input type="text" id="name" required placeholder="Your Name">
+                    <input type="text" id="name" required placeholder="Enter Name">
                 </div>
                 <div class="form-group">
                     <label>Date of Birth</label>
@@ -174,15 +196,15 @@
                 </div>
                 <div class="form-group">
                     <label>City</label>
-                    <input type="text" id="city" required placeholder="Punjab">
+                    <input type="text" id="city" required placeholder="Your City">
                 </div>
                 <div class="form-group">
                     <label>Phone Number</label>
-                    <input type="tel" id="phone" required placeholder="+92*****">
+                    <input type="tel" id="phone" required placeholder="03xx xxxxxxx">
                 </div>
                 <div class="form-group">
                     <label>WhatsApp Number</label>
-                    <input type="tel" id="whatsapp" required placeholder="+92****">
+                    <input type="tel" id="whatsapp" required placeholder="03xx xxxxxxx">
                 </div>
                 <div class="form-group">
                     <label>Gender</label>
@@ -192,13 +214,18 @@
                         <option value="Other">Other</option>
                     </select>
                 </div>
+                <div class="form-group">
+                    <label>Upload Payment Screenshot</label>
+                    <input type="file" id="payment_img" accept="image/*" required>
+                </div>
+
                 <button type="submit" class="btn-submit">SUBMIT & GENERATE CARD</button>
             </form>
         </div>
 
         <div id="resultPage">
             <div class="banner" style="font-size: 18px; text-align: center;">REGISTRATION CARD</div>
-            <div style="text-align: center; font-size: 11px; color: #888; margin-bottom: 20px;">Nawab ZADA hacking Academy - Session 2026</div>
+            <div style="text-align: center; font-size: 11px; color: #888; margin-bottom: 20px;">Nawab ZADA Academy - Session 2026</div>
 
             <div class="data-row"><span class="data-label">Full Name:</span> <span id="resName"></span></div>
             <div class="data-row"><span class="data-label">DOB:</span> <span id="resDob"></span></div>
@@ -206,13 +233,13 @@
             <div class="data-row"><span class="data-label">Phone:</span> <span id="resPhone"></span></div>
             <div class="data-row"><span class="data-label">WhatsApp:</span> <span id="resWhatsapp"></span></div>
             <div class="data-row"><span class="data-label">Gender:</span> <span id="resGender"></span></div>
-            <div class="data-row"><span class="data-label">Status:</span> <span class="status-badge">PENDING VERIFICATION</span></div>
+            <div class="data-row"><span class="data-label">Status:</span> <span class="status-badge">PAID & PENDING VERIFICATION</span></div>
 
             <div class="footer-note">
-                📸 <strong>Action Required:</strong> Is card ka screenshot lein aur Mera Nmber save kr ka WhatsApp par send karein taake aapka batch confirm ho sakay.
+                📸 <strong>Action Required:</strong> Dear Is card ka screenshot lein Mera Nmber save kr ka WhatsApp par send karein taake aapka batch confirm ho sakay.
             </div>
 
-            <a href="https://wa.me/971528243405?text=Jani%20maine%20register%20kar%20liya%20hai%2C%20yeh%20raha%20mera%20screenshot" class="btn-submit btn-whatsapp" target="_blank">SEND TO WHATSAPP</a>
+            <a href="https://wa.me/971528243405?text=Boss%20maine%20fees%20pay%20kar%20di%20hai%20aur%20register%20bhi%2C%20yeh%20raha%20mera%20form%20screenshot" class="btn-submit btn-whatsapp" target="_blank">SEND TO WHATSAPP</a>
             
             <button onclick="window.location.reload()" class="btn-submit" style="background: #333; color: white;">GENERATE NEW FORM</button>
         </div>
